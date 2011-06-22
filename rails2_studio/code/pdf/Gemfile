@@ -1,0 +1,4 @@
+source 'http://rubygems.org'
+
+gem 'ttfunk', :git => "git://github.com/sandal/ttfunk"
+gem 'prawn',  :git => "git://github.com/sandal/prawn", :submodules => true 

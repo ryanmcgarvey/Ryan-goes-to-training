@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Name:</b>
+  <%= @person.name %>
+</p>
+
+<!-- START:body -->
+<h2>Add a comment</h2>
+<%= form_for [@person, Comment.new], :remote => true do |f| %>
+  <%= f.text_area :body, :rows => 2, :cols => 20 %>
+  <%= f.submit %>
+<% end %>
+
+<%= render 'comments', :comments => @person.comments %>
+<!-- END:body -->
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

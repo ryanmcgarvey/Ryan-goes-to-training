@@ -1,0 +1,9 @@
+%h1&= @team.name
+
+%p Cards for players:
+
+%ul
+  - @team.cards.each do |card|
+    %li&= card.player
+
+= link_to "Edit…", edit_team_path(@team)

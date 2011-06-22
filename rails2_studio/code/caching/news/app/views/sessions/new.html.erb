@@ -1,0 +1,18 @@
+<div id="banner">
+  <h1>Login</h1>
+  <p>
+    For demo purposes only, no password is required!
+</div>
+
+<%= form_tag session_path do %>
+<fieldset>	
+	<p>
+	  <label for="name" class="required">Name</label>
+    <%= text_field_tag :name, params[:name], 
+                       :class => 'large textbox', :size => 30 %>
+	</p>
+	<div class="actions">
+    <%= submit_tag 'Log in', :class => 'button' %>
+  </div>
+</fieldset>
+<% end %>

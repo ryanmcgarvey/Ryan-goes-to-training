@@ -1,0 +1,2 @@
+$("#comments").html("<%= escape_javascript(render :partial => 'people/comments', :locals => {:comments => @person.comments}) %>");
+$("#comment_body").val("");

@@ -1,0 +1,43 @@
+== Rails II Studio Example Code
+
+This directory contains the example code used in the Pragmatic Studio: 
+Rails II Studio class:
+ 
+  http://pragmaticstudio.com/rails2
+  
+== Copyright
+
+This software is Copyright (c) 2011 The Pragmatic Studio 
+(pragmaticstudio.com), unless otherwise marked.  Software 
+from other projects are subject to the license(s) appropriate 
+to those projects.  You are responsible for complying with 
+licenses for software you use.
+
+== License
+
+If you have paid for enrollment in a Pragmatic Studio course, we 
+grant you permission to use this software and associated documentation 
+files (the "Software") for your personal educational purposes only, 
+including the rights to use and modify the Software subject to the 
+following conditions:
+
+- You may not use this Software for commercial purposes including, but 
+  not limited to, selling or licensing this Software and using this 
+  Software in other training contexts.
+
+- You many not distribute or publish this Software.
+
+== Warranty
+
+This Software is provided for educational purposes only, and comes with 
+absolutely no warranty. It should not be used in production applications.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN 
+THE SOFTWARE. 
+
+

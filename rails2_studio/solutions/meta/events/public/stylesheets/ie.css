@@ -1,0 +1,37 @@
+/*
+ * The Pragmatic Studio
+ * http://pragmaticstudio.com
+ * Copyright (c) 2007 The Pragmatic Studio
+ */
+ 
+/* 
+ * Fixes font-size keyword problem for IE5/Win 
+ */
+body {
+	font-size: x-small; /* IE5 Win */
+	voice-family: "\"}\""; 
+	voice-family: inherit;
+	font-size: small;
+}
+
+html>body {  /* be nice to Opera */
+  font-size: small;
+}
+
+/* SELF-CLEARING FLOATS */
+
+/* Trigger hasLayout and target IE5+6/win only */
+* html #header,
+* html #footer,
+* html #main-body,
+* html #event {
+  height: 1%;
+}
+
+/* Trigger hasLayout and target IE7/win only */
+*:first-child+html #header, 
+*:first-child+html #footer, 
+*:first-child+html #main-body, 
+*:first-child+html #event {
+	min-height: 1px;
+}

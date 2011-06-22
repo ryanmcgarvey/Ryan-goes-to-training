@@ -1,0 +1,28 @@
+<% form_for artist.with_extra_albums do |artist_form| -%> 
+  <%= artist_form.error_messages %>
+  
+  <p>
+    <%= artist_form.label :name %>:
+    <%= artist_form.text_field :name %> 
+  </p>
+
+  <table> 
+    <tr>
+      <th>Album title</th>
+      <th>Year</th>
+      <th>Condition</th>
+    </tr>
+    <!-- START:LOOP -->
+    <% artist_form.fields_for(:albums) do |album_form| -%>
+      <tr>
+        <td><%= album_form.text_field :title %></td>
+        <td><%= album_form.text_field :year, :size => 6 %></td>
+        <td><%= album_form.select :condition, Album::VALID_CONDITIONS, :include_blank => "-select-" %></td>
+        
+        <td><%= delete_child_option(album_form) %></td>
+      </tr>
+    <% end -%>
+    <!-- END:LOOP -->
+  </table>  
+  <%= submit_tag %>
+<% end %>

@@ -1,0 +1,22 @@
+<h1><%= h @artist.name %></h1>
+
+<p>
+  Albums for <%= h @artist.name %>:
+</p> 
+
+<table cellpadding="4">                        
+  <tr>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Condition</th>
+  </tr>
+  <% @artist.albums.index_listing.each do |album| %>
+    <tr>
+      <td><%= h album.title %></td>
+      <td><%= h album.year %></td>
+      <td><%= h album.condition %></td>
+    </tr>
+  <% end -%>
+</table>
+
+<%= link_to "Edit…", edit_artist_path(@artist) %>

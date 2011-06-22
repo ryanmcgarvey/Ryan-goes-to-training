@@ -1,0 +1,12 @@
+<div class="field">
+    <%= member_form.label :name, "Member Name" %>
+    <%= member_form.text_field :name %>
+    <%= member_form.label :email, "Member Email" %>
+    <%= member_form.text_field :email %>
+    <%= member_form.label :password, "Member password" %>
+    <%= member_form.password_field :password %>
+ 	<%= unless member_form.object.new_record?
+                member_form.check_box('_destroy') + member_form.label('_destroy', 'Delete') 
+              end %>
+
+</div>

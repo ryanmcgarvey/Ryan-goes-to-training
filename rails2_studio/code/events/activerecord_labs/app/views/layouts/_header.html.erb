@@ -1,0 +1,16 @@
+<div id="header">
+  <div id="logo">
+    <%= link_to(image_tag("logo.jpg"), events_path) %>
+  </div>
+  <div id="navigation">
+    <p>
+      <% if logged_in? %>
+        <%= link_to 'Logout', session_path, :method => :delete  %>
+      <% else %>
+        <%= link_to 'Join', new_user_path  %>
+        <span class="separator">|</span>
+        <%= link_to 'Login', new_session_path  %>
+      <% end %>
+    </p>
+  </div>
+</div>

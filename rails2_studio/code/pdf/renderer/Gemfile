@@ -1,0 +1,6 @@
+source 'http://rubygems.org'
+
+gem 'rails', '>=3.0.8'
+gem 'sqlite3'
+gem 'ttfunk', :git => "git://github.com/sandal/ttfunk"
+gem 'prawn', :git => "git://github.com/sandal/prawn", :submodules => true 

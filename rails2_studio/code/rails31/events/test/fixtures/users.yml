@@ -1,0 +1,9 @@
+fred:
+  name: Fred Flintstone
+  email: fred@flintstones.com
+  password_digest: <%= BCrypt::Password.create('test') %>
+  
+barney:
+  name: Barney Rubble
+  email: barney@rubbles.com
+  password_digest: <%= BCrypt::Password.create('test') %>

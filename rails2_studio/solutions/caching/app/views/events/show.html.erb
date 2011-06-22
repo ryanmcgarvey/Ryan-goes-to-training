@@ -1,0 +1,47 @@
+<table class="records show" cellpadding="0" cellspacing="0">
+  <tr>
+    <th colspan="2"><%= @event.name %></th>
+  </tr>
+  <tr>
+    <td class="attribute">Description</td>
+    <td><%= @event.description %></td>
+  </tr>
+  <tr>
+    <td class="attribute">Image Location</td>
+    <td><%= @event.image_location %></td>
+  </tr>
+  <tr>
+    <td class="attribute">Location</td>
+    <td><%= @event.location %></td>
+  </tr>
+  <tr>
+    <td class="attribute">Capacity</td>
+    <td><%= pluralize(@event.capacity, 'person') %></td>
+  </tr>
+  <tr>
+    <td class="attribute">Price</td>
+    <td><%= number_to_currency(@event.price) %></td>
+  </tr>
+  <tr>
+    <td class="attribute">Starts</td>
+    <td><%= @event.starts_at.to_s(:event_time) %></td>
+  </tr>
+</table>
+
+<div class="link-menu">
+  <%= link_to 'Review', new_event_review_url(@event) %> |
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Destroy', @event, 
+              :confirm => 'Are you sure?', 
+              :method => :delete %> |
+  <%= link_to 'Back', events_path %>
+</div>
+
+<% if @event.tweets.any? %>
+<h2> Twitter Traffic </h2>
+<ul>
+<% @event.tweets.each do |tweet| %>
+  <li><%= image_tag tweet.profile_image_url %> <%= tweet.from_user %> says <%= tweet.text %></li>
+<% end %>
+</ul>
+<% end %>

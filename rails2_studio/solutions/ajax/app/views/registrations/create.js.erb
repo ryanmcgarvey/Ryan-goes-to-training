@@ -1,0 +1,2 @@
+$("#events").html("<%= escape_javascript(render "users/events", :events => @user_events) %>");
+$("#register_event_<%= @event.id %>").html("Registered!");

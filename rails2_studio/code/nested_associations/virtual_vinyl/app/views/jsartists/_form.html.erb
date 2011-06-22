@@ -1,0 +1,16 @@
+<% form_for artist do |artist_form| %> 
+  <%= artist_form.error_messages %>
+  <p>
+    <%= artist_form.label :name %>: <%= artist_form.text_field :name %> 
+  </p>
+  <table>
+    <tbody id="albums">
+      <% artist_form.fields_for(:albums) do |album_form| %>
+        <%= render :partial => "album_form", :locals => { :album_form => album_form } %>
+      <% end %>
+    </tbody>
+  </table>
+  <%= button_to_add_an_album(artist_form) %> 
+  <hr />
+  <%= submit_tag %>
+<% end %>

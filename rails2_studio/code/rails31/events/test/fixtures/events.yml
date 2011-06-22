@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+rails_studio:
+  name: Pragmatic Rails Studio
+  description: Some arbitrary description
+  image_location: rails_studio.jpg
+  location: Denver
+  capacity: 30
+  price: 9.95
+  starts_at: 2010-06-21 17:42:48
+
+snowboarding:
+  name: Snowboarding adventure
+  description:  Pay money to risk death while getting cold and wet
+  image_location: snowboard.gif
+  location: Aspen
+  capacity: 10
+  price: 2000
+  starts_at: 2010-06-21 17:42:48

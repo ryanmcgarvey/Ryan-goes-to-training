@@ -1,0 +1,18 @@
+<!-- the template -->
+<script id="people_template" type="text/x-jquery-tmpl">  
+    <li>  
+         ${person.name}
+    </li>  
+</script>
+
+<!-- the list to fill in -->
+<ul id="people"></ul>  
+
+<script>
+ $.getJSON('/people.json?q=chadfower', function(tweets) {
+	    $("#people").html($("#people_template").tmpl(tweets));
+       });
+</script>
+
+
+

@@ -1,0 +1,33 @@
+<script>
+$(document).ready(
+  function(){
+    setInterval(function(){
+	  $.getJSON('/comments.json', 
+	            {}, 
+	            function(comments) {
+		          $("#number-of-comments").html("There are " + comments.length + " total comments.");
+		         });
+    }, 3000);
+  });
+</script>
+
+<div id='number-of-comments'>
+	Fetching number of comments...
+</div>
+
+<!-- START:body -->
+<h1>Listing people</h1>
+
+<%= link_to "Showing all (toggle)", 
+            people_path(:admin => true), 
+            :remote => true, 
+            :id => 'toggle' %>
+
+<ul id='people'>
+	<%= render @people %>
+</ul>
+
+<%= link_to 'New Person', new_person_path %>
+<!-- END:body -->
+
+

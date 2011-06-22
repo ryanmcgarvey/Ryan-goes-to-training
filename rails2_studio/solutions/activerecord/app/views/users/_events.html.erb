@@ -1,0 +1,7 @@
+<h1>Your <%= pluralize(events.size, "event") %></h1>
+
+<ul>
+  <% for event in events %>
+    <li><%= link_to event.name, event %></li>
+  <% end %>
+</ul>

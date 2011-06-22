@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @comment.content %>
+</p>
+
+<p>
+  <b>Commentable:</b>
+  <%= @comment.commentable_id %>
+</p>
+
+<p>
+  <b>Commentable type:</b>
+  <%= @comment.commentable_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to "Destroy", @comment, :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'View All', comments_path %>

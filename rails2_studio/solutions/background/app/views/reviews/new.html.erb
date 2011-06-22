@@ -1,0 +1,24 @@
+<div id="banner">
+  <h1>Review <%= @event.name %></h1>
+</div>
+
+<%= form_for [ @event, @review ] do |f| %>
+  <%= render :partial => "shared/errors", :locals => {:model => @review} %>
+  <fieldset>
+    <div class="required">
+      <p>
+        <%= f.label :comments, 'Review' %>
+        <%= f.text_area :comments, :rows => 15 %>
+        <span class="hint">We appreciate your honesty!</span>
+      </p>
+
+      <p>
+        <%= f.label :reviewer, 'Your Name' %>
+        <%= f.text_field :reviewer, :class => 'large textbox', :size => 30 %>
+      </p>
+    </div>
+    <p class="actions">
+      <%= f.submit "Create" %> or <%= link_to 'cancel', events_path %>
+    </p>
+  </fieldset>
+<% end %>

@@ -1,0 +1,13 @@
+<% SALT = "NaCl" unless defined?(SALT) %> 
+
+fred:
+  name: Fred Flintstone
+  email: fred@flintstones.com
+  salt: <%= SALT %>
+  hashed_password: <%= User.encrypted_password('test', SALT) %>
+
+barney:
+  name: Barney Rubble
+  email: barney@rubbles.com
+  salt: <%= SALT %>
+  hashed_password: <%= User.encrypted_password('test', SALT) %>

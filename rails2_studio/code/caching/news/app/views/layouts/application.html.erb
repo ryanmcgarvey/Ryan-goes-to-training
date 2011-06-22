@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News</title>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <% [:notice, :warning, :error].each do |type| %>
+    <% if flash[type] %>
+      <div id="flash_<%= type %>" class="message">
+        <p><%= flash[type] %></p>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div id="main-body">
+
+    <div id="sidebar">
+      <h1>Tags</h1>
+      <% cache('tag_cloud') do %>
+        <ul>
+          <% @tags.each do |tag| %>
+            <li><%= tag.name %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div> 
+
+    <div id="content">
+      <%= yield :layout %>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <p>
+      Copyright &copy; 2011
+      Today's News 
+      All Rights Reserved.
+    </p>
+  </div>
+</body>
+</html>

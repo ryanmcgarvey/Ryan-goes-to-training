@@ -1,0 +1,27 @@
+<div id="banner">
+  <h1>Login</h1>
+  <p>
+    Don't have an account yet? 
+    You can <%= link_to 'sign up', new_user_path %> now.
+  </p>
+</div>
+
+<%= form_tag session_path do %>
+<fieldset>	
+	<p>
+	  <label for="email" class="required">E-mail</label>
+    <%= text_field_tag :email, params[:email], 
+                       :class => 'large textbox', :size => 30 %>
+	</p>
+	
+	<p>
+	  <label for="password" class="required">Password</label>
+	  <%= password_field_tag :password, nil,
+	                         :class => 'large textbox', :size => 30 %>
+	</p>
+	
+	<div class="actions">
+    <%= submit_tag 'Log in', :class => 'button' %>
+  </div>
+</fieldset>
+<% end %>

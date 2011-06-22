@@ -1,0 +1,6 @@
+<tr>
+  <td><%= album_form.text_field :title %></td>
+  <td><%= album_form.text_field :year, :size => 6 %></td>
+  <td><%= album_form.select     :condition, Album::VALID_CONDITIONS, :include_blank => "-select-" %></td>
+  <td><%= delete_child_option(album_form) %></td>
+</tr>

@@ -1,0 +1,17 @@
+<%= form_for artist do |artist_form| %> 
+  <p>
+    <%= artist_form.label :name %>: <%= artist_form.text_field :name %> 
+  </p>
+  <table> 
+    <tr> <th>Album title</th> <th>Year</th> <th>Condition</th> </tr>
+    <%= artist_form.fields_for(:albums) do |album_form| -%>
+      <tr>
+        <td><%= album_form.text_field :title %></td>
+        <td><%= album_form.text_field :year, :size => 6 %></td>
+        <td><%= album_form.select     :condition, Album::VALID_CONDITIONS, 
+                                      :include_blank => "-select-" %></td>
+      </tr>
+    <% end %>
+  </table>  
+  <%= submit_tag %>
+<% end %>

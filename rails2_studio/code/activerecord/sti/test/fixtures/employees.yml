@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  reports_to: 1
+  department: 1
+
+two:
+  name: MyString
+  reports_to: 1
+  department: 1
